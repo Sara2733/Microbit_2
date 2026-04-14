@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Microbit Motion Recorder</title>
+
+<style>
+body {
+  font-family: Arial;
+  text-align: center;
+  background: linear-gradient(135deg, #4f46e5, #9333ea);
+  color: white;
+  padding: 20px;
+}
+
+button, select {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+}
+
+.card {
+  background: rgba(255,255,255,0.15);
+  padding: 15px;
+  border-radius: 15px;
+  margin-top: 15px;
+}
+
+.big {
+  font-size: 40px;
+  font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🎮 Microbit Motion Recorder</h1>
+
+<button id="connect">🔗 Connetti</button>
+
+<div class="card">
+  <h2>Seleziona movimento</h2>
+  <select id="label">
+    <option value="camminata">🚶 Camminata</option>
+    <option value="corsa">🏃 Corsa</option>
+    <option value="salto">⬆️ Salto</option>
+    <option value="calcio">⚽ Calcio</option>
+  </select>
+</div>
+
+<div class="card">
+  <button id="start">▶️ Start</button>
+  <button id="stop">⏹ Stop</button>
+  <button id="download">💾 Scarica CSV</button>
+</div>
+
+<div class="card">
+  <h2>Movimento attuale</h2>
+  <div id="movement" class="big">—</div>
+</div>
+
+<div class="card">
+  <p>X: <span id="x">—</span></p>
+  <p>Y: <span id="y">—</span></p>
+  <p>Z: <span id="z">—</span></p>
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
